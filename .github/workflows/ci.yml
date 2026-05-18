@@ -1,4 +1,4 @@
-name: testing-node.js
+name: Node.js Testing CI
 
 on: push
 
@@ -9,11 +9,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
-      - name: Run the test
+
+      - name: Run tests
         run: npm test
-      - name: Final sentence
-        run: echo "testing is successful"
+
+      - name: Final message
+        run: echo "Testing is successful"
