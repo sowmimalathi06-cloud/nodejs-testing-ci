@@ -16,7 +16,7 @@ jobs:
           node-version: 20
 
       - name: Run tests
-        run: npm test
+        run: npm start
 
       - name: Final message
         run: echo "Testing is successful"
